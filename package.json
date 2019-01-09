@@ -1,6 +1,6 @@
 {
   "name": "generator-klibrary",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Kopjra library generator",
   "homepage": "",
   "author": {
@@ -70,6 +70,5 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "Kopjra/generator-klibrary",
-  "private": true
+  "repository": "Kopjra/generator-klibrary"
 }
