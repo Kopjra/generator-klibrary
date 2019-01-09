@@ -27,21 +27,21 @@ module.exports = class extends Generator {
         })).map(path => path.substring(this.templatePath().length + 1));
 
         for (const path of paths) {
-            this.fs.copyTpl(
+            await this.fs.copyTpl(
                 this.templatePath(path),
                 this.destinationPath(path),
                 this.answers
             );
         }
 
-        this.fs.copyTpl(
+        await this.fs.copyTpl(
             this.templatePath(".npmignoreRENAMED"),
             this.destinationPath(".npmignore"),
             this.answers
         );
     }
 
-    async install() {
+    async installDeps() {
         await this.npmInstall(
             [
                 "@types/chai",
