@@ -11,7 +11,7 @@ describe("generator-klibrary:app", () => {
     });
 
     test("creates files", () => {
-        assert.file(["tslint.json", "README.md"]);
+        assert.file(["tslint.json", "README.md", "src/index.ts", ".npmignore"]);
         assert.fileContent("README.md", /# testLib/);
     });
 });

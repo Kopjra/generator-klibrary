@@ -22,7 +22,7 @@ module.exports = class extends Generator {
     }
 
     async writing() {
-        const paths = (await glob(this.templatePath("**/*"), {
+        const paths = (await glob(this.templatePath("**/!(*RENAMED)"), {
             dot: true
         })).map(path => path.substring(this.templatePath().length + 1));
 
@@ -33,6 +33,12 @@ module.exports = class extends Generator {
                 this.answers
             );
         }
+
+        this.fs.copyTpl(
+            this.templatePath(".npmignoreRENAMED"),
+            this.destinationPath(".npmignore"),
+            this.answers
+        );
     }
 
     async install() {
