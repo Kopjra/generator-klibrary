@@ -79,7 +79,7 @@ module.exports = class extends Generator {
             ],
             { "save-dev": true }
         ).then();
-        this.npmInstall(["joi", "nconf"], { save: true }).then();
+        this.npmInstall(["joi", "nconf", "ts-polyfill"], { save: true }).then();
     }
 
     end() {
