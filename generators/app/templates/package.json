@@ -41,6 +41,5 @@
     ],
     "sourceMap": true,
     "instrument": true
-  },
-  "private": true
+  }
 }
