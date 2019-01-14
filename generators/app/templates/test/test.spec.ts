@@ -1,5 +1,5 @@
 import {expect, use} from "chai";
-import * as chaiPromised from "chai-as-promised";
+import chaiPromised from "chai-as-promised";
 
 use(chaiPromised);
 
