@@ -46,6 +46,12 @@ module.exports = class extends Generator {
         }
 
         this.fs.copyTpl(
+            this.templatePath(".gitignoreRENAMED"),
+            this.destinationPath(".gitignore"),
+            this.answers
+        );
+
+        this.fs.copyTpl(
             this.templatePath(".npmignoreRENAMED"),
             this.destinationPath(".npmignore"),
             this.answers

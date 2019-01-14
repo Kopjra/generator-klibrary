@@ -1,7 +1,7 @@
-import * as nconf from "nconf";
-import * as joi from "joi";
-import * as path from "path";
-import * as fs from "fs";
+import nconf from "nconf";
+import joi from "joi";
+import path from "path";
+import fs from "fs";
 
 if (process.env["NODE_ENV"] !== "production" && process.env["NODE_ENV"] !== "staging") {
     const dotEnvLocalPath = path.resolve(`./.env.${process.env["NODE_ENV"]}.local`);
@@ -67,5 +67,5 @@ nconf.env({
 // TODO: export get configuration methods
 // eg.
 // export function getObjectStores(): ObjectStoreConfiguration {
-//     return nconf.get("objectstores");
+//     return nconf.get("objectstores") || {};
 // }
