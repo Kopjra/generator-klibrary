@@ -5,7 +5,9 @@
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
-    "build": "rimraf dist && tsc",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "tsc": "tsc",
+    "build": "rimraf dist && npm run tslint && npm run tsc",
     "test": "NODE_ENV=test mocha \"test/**/*.spec.ts\"",
     "integration": "NODE_ENV=integration mocha \"integration/**/*.int.ts\"",
     "coverage": "NODE_ENV=test nyc mocha --bail --exit --reporter mocha-junit-reporter"
